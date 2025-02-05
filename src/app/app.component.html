@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand">Állatmenhely</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Home Link -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/home" routerLinkActive="active-link">Főoldal</a>
+        </li>
+
+        <!-- Dropdown Menu for Animals -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Állatok
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/animals/cats" routerLinkActive="active-link">Macskák</a></li>
+            <li><a class="dropdown-item" routerLink="/animals/dogs" routerLinkActive="active-link">Kutyák</a></li>
+          </ul>
+        </li>
+
+        <!-- Information Link -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Információk
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/information/contact" routerLinkActive="active-link">Elérhetőség</a></li>
+            <li><a class="dropdown-item" routerLink="/information/howitworks" routerLinkActive="active-link">Tudnivalók</a></li>
+          </ul>
+        </li>
+
+        <!-- Profile Link -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Profil
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/profile/mydata" routerLinkActive="active-link">Adataim</a></li>
+            <li><a class="dropdown-item" routerLink="/profile/favorites" routerLinkActive="active-link">Kedvencek</a></li>
+            <li><a class="dropdown-item" routerLink="/profile/reservations" routerLinkActive="active-link">Foglalásaim</a></li>
+          </ul>
+        </li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Router Outlet -->
+<router-outlet></router-outlet>
