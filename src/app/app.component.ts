@@ -7,5 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'adoption-portal'; // Optional, not critical for now
+  isLoggedIn = false;
+  username = '';
+
+  constructor() {
+    // Példa: Ellenőrizzük, hogy be van-e jelentkezve a felhasználó
+    const user = localStorage.getItem('user');
+    if (user) {
+      this.isLoggedIn = true;
+      this.username = JSON.parse(user).username;
+    }
+  }
+
+  logout() {
+    localStorage.removeItem('user');
+    this.isLoggedIn = false;
+    this.username = '';
+    window.location.reload();
+  }
 }

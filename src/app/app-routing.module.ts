@@ -11,6 +11,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { MydataComponent } from './pages/profile/mydata/mydata.component';
 import { FavoritesComponent } from './pages/profile/favorites/favorites.component';
 import { ReservationsComponent } from './pages/profile/reservations/reservations.component';
+import { AuthComponent } from './pages/auth/auth.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -40,6 +41,11 @@ const routes: Routes = [
       { path: 'reservations', component: ReservationsComponent },
     ] 
   },
+
+  { path: 'auth', component: AuthComponent }, // Itt adtuk hozzá a route-t
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Ha nincs route, akkor a főoldalra irányít
+  // Ide jöhetnek további route-ok is
+  
 ];
 
 @NgModule({

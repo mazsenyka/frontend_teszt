@@ -10,11 +10,13 @@ import { AnimalsModule } from './pages/animals/animals.module'; // AnimalsModule
 import { CatsComponent } from './pages/animals/cats/cats.component'; // Csak ha közvetlenül itt is használni akarod
 import { DogsComponent } from './pages/animals/dogs/dogs.component'; // Csak ha közvetlenül itt is használni akarod
 import { ContactComponent } from './pages/information/contact/contact.component'; // Csak ha közvetlenül itt is használni akarod
-import { HowitworksComponent } from './pages/information/howitworks/howitworks.component'; // Csak ha közvetlenül itt is használni akarod
+import { HowitworksComponent } from './pages/information/howitworks/howitworks.component';
+import { AuthComponent } from './pages/auth/auth.component'; // Csak ha közvetlenül itt is használni akarod
 
 @NgModule({
   declarations: [
     AppComponent,
+    AuthComponent,
     // Ide csak azokat a komponenseket rakd, amelyeket itt használni szeretnél közvetlenül
     // Ha a ProfileModule-ban van deklarálva, nem kell itt deklarálni
     // Ha a CatsComponent vagy DogsComponent kell az AppModule-ba, akkor tartsd meg itt.

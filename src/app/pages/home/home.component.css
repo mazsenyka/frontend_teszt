@@ -1,4 +1,6 @@
-
+main {
+    margin-top: 80px; /* Ez a navbar magasságához igazítható */
+    }
 
 .banner {
     text-align: center;

@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="card shadow-sm rounded">
+          <div class="card-body">
+            <h5 class="card-title text-center mb-4">Bejelentkezés / Regisztráció</h5>
+            
+            <!-- Bejelentkezés és Regisztráció form -->
+            <form>
+              <!-- Email input -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email cím</label>
+                <input type="email" class="form-control form-control-lg" id="email" placeholder="Email cím">
+              </div>
+  
+              <!-- Jelszó input -->
+              <div class="mb-3">
+                <label for="password" class="form-label">Jelszó</label>
+                <input type="password" class="form-control form-control-lg" id="password" placeholder="Jelszó">
+              </div>
+  
+              <!-- Bejelentkezés gomb -->
+              <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">Bejelentkezés</button>
+              
+              <hr class="my-4">
+              
+              <!-- Regisztráció gomb -->
+              <button type="button" class="btn btn-outline-secondary btn-lg w-100" (click)="goToRegister()">Regisztráció</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
