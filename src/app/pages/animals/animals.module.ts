@@ -6,6 +6,7 @@ import { CatsComponent } from './cats/cats.component';
 import { DogsComponent } from './dogs/dogs.component';
 import { AnimalsRoutingModule } from './animals-routing.module';
 import { RouterModule } from '@angular/router';
+import { DogProfileComponent } from './dogs/dog-profile/dog-profile.component';
 
 @NgModule({
   declarations: [AnimalsComponent, CatsComponent, DogsComponent], // Itt be kell deklarálni minden komponenst

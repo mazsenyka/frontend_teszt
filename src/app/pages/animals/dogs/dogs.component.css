@@ -1,11 +1,11 @@
-.dogs-grid {
+.animals-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Rugalmas elrendezés */
     gap: 20px; /* Térköz a csempék között */
     padding: 20px;
   }
   
-  .dog-card {
+  .animal-card {
     background-color: #f4f4f4;
     border-radius: 8px;
     overflow: hidden;
@@ -14,13 +14,13 @@
     padding: 10px;
   }
   
-  .dog-card img {
+  .animal-card img {
     width: 100%; /* A kép kitölti a csempe szélességét */
     height: auto; /* A kép magassága automatikusan igazodik */
     border-radius: 5px;
   }
   
-  .dog-card p {
+  .animal-card p {
     font-size: 16px;
     margin-top: 10px;
     color: #333;
