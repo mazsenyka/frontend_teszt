@@ -3,6 +3,7 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Rugalmas elrendezés */
     gap: 20px; /* Térköz a csempék között */
     padding: 20px;
+    margin-top: 80px;
   }
   
   .animal-card {

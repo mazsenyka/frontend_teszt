@@ -11,9 +11,11 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { MydataComponent } from './pages/profile/mydata/mydata.component';
 import { FavoritesComponent } from './pages/profile/favorites/favorites.component';
 import { ReservationsComponent } from './pages/profile/reservations/reservations.component';
-import { AuthComponent } from './pages/auth/auth.component';
+import { AuthComponent } from './auth/auth.component';
 import { CatProfileComponent } from './pages/animals/cats/cat-profile/cat-profile.component';
 import { DogProfileComponent } from './pages/animals/dogs/dog-profile/dog-profile.component';
+
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,7 +24,7 @@ const routes: Routes = [
     path: 'animals', 
     component: AnimalsComponent, 
     children: [
-      { path: '', redirectTo: '/cats', pathMatch: 'full' },
+      { path: '', redirectTo: 'cats', pathMatch: 'full' },
       { path: 'cats', component: CatsComponent },
       { path: 'cats/:id', component: CatProfileComponent }, // Dinamikus útvonal
       { path: 'dogs', component: DogsComponent },
@@ -47,10 +49,13 @@ const routes: Routes = [
     ] 
   },
 
-  { path: 'auth', component: AuthComponent }, // Itt adtuk hozzá a route-t
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Ha nincs route, akkor a főoldalra irányít
   // Ide jöhetnek további route-ok is
-
+  { path: '', redirectTo: '/auth', pathMatch: 'full' }, // Főoldal auth-ra mutat
+  { path: 'auth', component: AuthComponent }, // Bejelentkezés és regisztráció egy helyen
+  { path: 'profile', component: ProfileComponent }, // Bejelentkezés után ide jut
+  { path: '**', redirectTo: '/auth' } // Hibás útvonal esetén auth-ra dob
+ 
 ];
 
 @NgModule({

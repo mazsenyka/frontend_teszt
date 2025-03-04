@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "adoption-portal": {
+    "allatmenhely": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/adoption-portal",
+            "outputPath": "dist/allatmenhely",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -47,6 +47,12 @@
           },
           "configurations": {
             "production": {
+                  "fileReplacements": [
+                    {
+                      "replace": "src/environments/environment.ts",
+                      "with": "src/environments/environment.prod.ts"
+                    }
+                  ],
               "budgets": [
                 {
                   "type": "initial",
@@ -73,10 +79,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "adoption-portal:build:production"
+              "buildTarget": "allatmenhely:build:production"
             },
             "development": {
-              "buildTarget": "adoption-portal:build:development"
+              "buildTarget": "allatmenhely:build:development"
             }
           },
           "defaultConfiguration": "development"
